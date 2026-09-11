@@ -15,13 +15,13 @@ if __name__ == "__main__":
     text2, _ = call_openai(
                         prompt="Hãy kể cho tôi một sự thật thú vị về Việt Nam.",
                         model=OPENAI_MODEL,
-                        temperature= 0.0,
+                        temperature= 0.5,
                         top_p= 0.9,
                         max_tokens= 1024)
     text3, _ = call_openai(
                         prompt="Hãy kể cho tôi một sự thật thú vị về Việt Nam.",
                         model=OPENAI_MODEL,
-                        temperature= 0.0,
+                        temperature= 1.0,
                         top_p= 0.9,
                         max_tokens= 256)
 

@@ -14,7 +14,6 @@ Hướng dẫn:
 
 import os
 import time
-from tkinter.filedialog import Open
 from typing import Any, Callable
 
 from dotenv import load_dotenv
