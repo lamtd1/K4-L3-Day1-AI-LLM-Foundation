@@ -47,7 +47,7 @@ Gọi `chat_with_system_prompt` hai lần với cùng câu hỏi
 
 **Hai phản hồi khác nhau như thế nào (độ dài, từ vựng, ví dụ)? System prompt
 ảnh hưởng đến hành vi model ra sao?** (3–4 câu)
-> *Câu trả lời của bạn*
+> System prompt ảnh hưởng rõ đến cách model trả lời. Persona giáo viên dùng từ ngữ đơn giản, ví dụ gần gũi; persona chuyên gia dùng thuật ngữ kỹ thuật và giải thích sâu hơn. Vì vậy, system prompt định hướng từ vựng, độ dài, mức độ chi tiết và cách trình bày của model.
 
 ### Câu 2.2 — tiktoken vs đếm từ
 Chọn một đoạn văn tiếng Việt ~100 từ. So sánh số token theo `count_tokens`
@@ -55,7 +55,7 @@ Chọn một đoạn văn tiếng Việt ~100 từ. So sánh số token theo `co
 
 **Hai con số chênh nhau bao nhiêu phần trăm? Vì sao tiếng Việt thường tốn
 nhiều token hơn tiếng Anh cùng độ dài?**
-> *Câu trả lời của bạn*
+> tiktoken cho số token chính xác hơn so với cách ước lượng số từ / 0.75. Hai con số chênh lệch vì một từ có thể được tách thành nhiều token. Tiếng Việt thường tốn nhiều token hơn tiếng Anh do đặc điểm dấu và cách tokenizer chia nhỏ từ.
 
 ---
 
