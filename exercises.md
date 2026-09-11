@@ -15,11 +15,17 @@ Gọi `call_openai` với temperature 0.0, 0.5, 1.0 và 1.5 dùng prompt
 **"Hãy kể cho tôi một sự thật thú vị về Việt Nam."**
 
 **Bạn nhận thấy quy luật gì qua bốn phản hồi?** (2–3 câu)
-> *Câu trả lời của bạn*
+
+> 0.0: trả lời gần như cố định, lặp lại nội dung tương tự mỗi lần gọi (deterministic).
+0.5 → 1.0: sự đa dạng tăng dần — cùng prompt nhưng câu trả lời khác nhau về cách diễn đạt, góc kể.
+1.5: có thể chệch hướng, lặp, hoặc sinh nội dung kém logic — "sáng tạo" quá mức.
+→ Quy luật: temperature càng cao → entropy sampling càng lớn → độ ngẫu nhiên tăng, độ nhất quán giảm.
 
 ### Câu 1.2 — Chọn temperature cho sản phẩm
 **Bạn sẽ đặt temperature bao nhiêu cho chatbot hỗ trợ khách hàng, và tại sao?**
-> *Câu trả lời của bạn*
+> Đặt temperature ≈ 0.2–0.5 (thường 0.3).
+
+Lý do: khách hàng cần đúng, nhất quán, an toàn — không cần sáng tạo. Temperature thấp giúp tránh hallucination và trả lời đồng nhất giữa các phiên.
 
 ### Câu 1.3 — Đánh đổi chi phí
 Kịch bản: 10.000 người dùng hoạt động mỗi ngày, mỗi người gọi API 3 lần,
@@ -27,7 +33,7 @@ mỗi lần trung bình ~350 token đầu ra.
 
 **Ước tính GPT-4o đắt hơn GPT-4o-mini bao nhiêu lần cho workload này? Nêu một
 trường hợp GPT-4o xứng đáng với chi phí và một trường hợp nên dùng mini:**
-> *Câu trả lời của bạn*
+> GPT-4o đắt hơn khoảng 17 lần. Phân tích pháp lý, y khoa, hoặc cần suy luận phức tạp chính xác thì dùng GPT-4o, Chatbot FAQ, phân loại ticket, tóm tắt ngắn — volume cao, độ khó thấp dùng GPT-4o-mini.
 
 ---
 
